@@ -45,7 +45,7 @@ dat_harmonised <- harmonise_data(exposure_dat = exposure,
 #format harmonised data for MR#
 dat_harmonised <- dat_to_MRInput(dat_harmonised, get_correlations = F, pop = "EUR")
 #create LD matrix of instruments#
-dat_harmonised$ABO.outcome@correlation <- matrix(c(1,-0.213,-0.213,1),nrow = 2,ncol = 2)
+dat_harmonised$ABO.outcome@correlation <- matrix(c(1,0.404548,0.404548,1),nrow = 2,ncol = 2)
 #MR#
 MR_result <- MendelianRandomization:: mr_ivw(dat_harmonised$`ABO.outcome`,
                                            model= "default",
